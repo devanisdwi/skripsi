@@ -1,4 +1,4 @@
-WebApps dapat diakses di: dihttps://skripsi-devanisdwi.streamlitapp.com/
+WebApps dapat diakses di: https://skripsi-devanisdwi.streamlitapp.com/
 
 #### Disusun dan dikembangkan oleh:
 - Nama: [Devanis Dwi Sutrisno](https://www.linkedin.com/in/devanis-dwi-sutrisno/)
