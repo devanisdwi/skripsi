@@ -32,22 +32,13 @@ if choose == 'Dokumentasi':
         my_file3 = path+'/kproto_model.pkl'
         st.write(my_file1)
         st.write(my_file2)
-        st.write(my_file3)
-
-        def file_selector(folder_path='.'):
-            filenames = os.listdir(folder_path)
-            selected_filename = st.selectbox('Select a file', filenames)
-            return os.path.join(folder_path, selected_filename)
-
-        filename = file_selector()
-        st.write('You selected `%s`' % filename)
-        
+        st.write(my_file3)        
         st.write("### Visualisasi Hasil Klaster")
-        image1 = Image.open('../distribution.png')
+        image1 = Image.open('/app/skripsi/website/distribution.png')
         image1 = image1.resize((600, 400))
         st.image(image1, caption='Cluster Distributions')
 
-        image2 = Image.open('../centroid.png')
+        image2 = Image.open('/app/skripsi/website/centroid.png')
         image2 = image2.resize((600, 400))
         st.image(image2, caption='Cluster Centroids')
     with doc3:
@@ -114,7 +105,7 @@ elif choose == 'Clustering Demo':
 
     df_predict = pd.DataFrame(data, index=[0])
     
-    clusters = pickle.load(open('../kproto_model.pkl', 'rb'))
+    clusters = pickle.load(open('/app/skripsi/website/kproto_model.pkl', 'rb'))
 
     if submitted: 
         prediction = clusters.predict(df_predict, categorical=[0, 1, 2, 3, 5, 6])
