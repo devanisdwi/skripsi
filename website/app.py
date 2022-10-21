@@ -26,6 +26,13 @@ if choose == 'Dokumentasi':
     with doc2:
         # Check file path for debugging
         import os
+        path = os.path.dirname(__file__)
+        my_file1 = path+'/distribution.png'
+        my_file2 = path+'/centroid.png'
+        my_file3 = path+'/kproto_model.pkl'
+        st.write(my_file1)
+        st.write(my_file2)
+        st.write(my_file3)
 
         def file_selector(folder_path='.'):
             filenames = os.listdir(folder_path)
