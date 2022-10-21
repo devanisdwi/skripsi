@@ -23,6 +23,17 @@ with st.sidebar:
 if choose == 'Dokumentasi':
 
     doc1, doc2, doc3, doc4 = st.columns([1,2,3,1])
+    with doc1:
+        # Check file path for debugging
+        import os
+
+        def file_selector(folder_path='.'):
+            filenames = os.listdir(folder_path)
+            selected_filename = st.selectbox('Select a file', filenames)
+            return os.path.join(folder_path, selected_filename)
+
+        filename = file_selector()
+        st.write('You selected `%s`' % filename)
     with doc2:
         st.write("### Visualisasi Hasil Klaster")
         image1 = Image.open('../distribution.png')
