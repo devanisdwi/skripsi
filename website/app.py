@@ -25,11 +25,11 @@ if choose == 'Dokumentasi':
     doc1, doc2, doc3, doc4 = st.columns([1,2,3,1])
     with doc2:
         st.write("### Visualisasi Hasil Klaster")
-        image1 = Image.open('distribution.png')
+        image1 = Image.open('../distribution.png')
         image1 = image1.resize((600, 400))
         st.image(image1, caption='Cluster Distributions')
 
-        image2 = Image.open('centroid.png')
+        image2 = Image.open('../centroid.png')
         image2 = image2.resize((600, 400))
         st.image(image2, caption='Cluster Centroids')
     with doc3:
@@ -95,9 +95,8 @@ elif choose == 'Clustering Demo':
     }]
 
     df_predict = pd.DataFrame(data, index=[0])
-
-    pickle_in = open('kproto_model.pkl', 'rb') 
-    clusters = pickle.load(pickle_in)
+    
+    clusters = pickle.load(open('../kproto_model.pkl', 'rb'))
 
     if submitted: 
         prediction = clusters.predict(df_predict, categorical=[0, 1, 2, 3, 5, 6])
