@@ -24,15 +24,6 @@ if choose == 'Dokumentasi':
 
     doc1, doc2, doc3, doc4 = st.columns([1,2,3,1])
     with doc2:
-        # Check file path for debugging
-        import os
-        path = os.path.dirname(__file__)
-        my_file1 = path+'/distribution.png'
-        my_file2 = path+'/centroid.png'
-        my_file3 = path+'/kproto_model.pkl'
-        st.write(my_file1)
-        st.write(my_file2)
-        st.write(my_file3)        
         st.write("### Visualisasi Hasil Klaster")
         image1 = Image.open('/app/skripsi/website/distribution.png')
         image1 = image1.resize((600, 400))
