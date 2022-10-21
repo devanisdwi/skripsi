@@ -23,7 +23,7 @@ with st.sidebar:
 if choose == 'Dokumentasi':
 
     doc1, doc2, doc3, doc4 = st.columns([1,2,3,1])
-    with doc1:
+    with doc2:
         # Check file path for debugging
         import os
 
@@ -34,7 +34,7 @@ if choose == 'Dokumentasi':
 
         filename = file_selector()
         st.write('You selected `%s`' % filename)
-    with doc2:
+        
         st.write("### Visualisasi Hasil Klaster")
         image1 = Image.open('../distribution.png')
         image1 = image1.resize((600, 400))
