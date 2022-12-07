@@ -89,7 +89,7 @@ elif choose == 'Clustering Demo':
     if submitted: 
         prediction = clusters.predict(df_predict, categorical=[0, 1, 2, 3, 5, 6])
         if prediction == 0:
-            pred = 'Visual'
+            pred = 'Read/Write'
         elif prediction == 1:
             pred = 'Audiotory'
         else:
@@ -102,7 +102,7 @@ elif choose == 'Clustering Demo':
     dec1, dec2, dec3 = st.columns([1,1,1])
     with dec1:
         st.markdown("""
-            1. Visual:
+            1. Read/Write:
                 - Mean score = 60
                 - Mean total_interaction = 15
                 - Mean total_activities = 22
